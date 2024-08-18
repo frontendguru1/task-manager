@@ -4,7 +4,7 @@ A task management application to help users organize, track, and prioritize task
 
 ## Project setup guide
 
-## 1 - Git Repository
+## 1 - Clone git repository
 ``` coded
 git clone git@github.com:frontendguru1/task-manager.git
 ```
@@ -14,7 +14,7 @@ git clone git@github.com:frontendguru1/task-manager.git
 npm i
 ```
 
-## 3 - run project
+## 3 - Run project
 ```coded
 npm run dev
 ```
