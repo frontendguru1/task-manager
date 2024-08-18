@@ -1,6 +1,13 @@
-# React + TypeScript + Vite
+# Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A task management application to help users organize, track, and prioritize tasks. Features include task creation, categorization, deadlines, and progress tracking. Built with React.js (or specify the frontend framework). The repository contains source code, documentation, and setup instructions.
+
+
+Git Repository:
+``` coded
+git clone git@github.com:frontendguru1/task-manager.git
+```
+
 
 Currently, two official plugins are available:
 
