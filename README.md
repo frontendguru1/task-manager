@@ -2,17 +2,24 @@
 
 A task management application to help users organize, track, and prioritize tasks. Features include task creation, categorization, deadlines, and progress tracking. Built with React.js (or specify the frontend framework). The repository contains source code, documentation, and setup instructions.
 
+## Steps to setup the project
 
-Git Repository:
+## 1 - Git Repository
 ``` coded
 git clone git@github.com:frontendguru1/task-manager.git
 ```
 
+## 2 - Install dependencies
+```coded
+npm i
+```
 
-Currently, two official plugins are available:
+## 3 - run project
+```coded
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
 
 ## Expanding the ESLint configuration
 
