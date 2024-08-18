@@ -1,4 +1,4 @@
-# Task Manager
+# Task Manager - React.js + Typescript + Redux Toolkit + React Router + Tailwind
 
 A task management application to help users organize, track, and prioritize tasks. Features include task creation, categorization, deadlines, and progress tracking. Built with React.js (or specify the frontend framework). The repository contains source code, documentation, and setup instructions.
 
