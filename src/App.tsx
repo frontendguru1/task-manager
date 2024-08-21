@@ -1,8 +1,7 @@
 import { Sidebar } from "./components"
-import { Outlet } from "./container"
+import { AppOutlet } from "./container"
 
-function App() {
-
+function AppContainer() {
   return (
     <>
     <div className={' h-screen w-full'}>
@@ -10,11 +9,12 @@ function App() {
 
       <div className="flex">
         <Sidebar />
-        <Outlet />
+        <AppOutlet />
       </div>
     </div>
     </>
   )
 }
 
-export default App
+
+export default AppContainer
