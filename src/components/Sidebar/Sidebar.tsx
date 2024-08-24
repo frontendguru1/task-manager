@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { iMenu, Menus } from "../../routers/Menus";
 
 function Sidebar() {
@@ -8,8 +8,13 @@ function Sidebar() {
       <ul>
         {
           Menus.map((menu: iMenu) => (
-            <li key={menu.title} className={'text-fuchsia-950 cursor-pointer hover:text-fuchsia-800'}>
-              <Link to={menu.route} className={'flex gap-3 py-3'}><img src={menu.icon} alt={menu.title} className={'w-7 h-auto'} /> {menu.title}</Link>
+            <li key={menu.title} className={'text-fuchsia-950 cursor-pointer hover:text-white'}>
+              <NavLink
+                to={menu.route}
+                className={({ isActive }) =>
+                  isActive ? 'flex gap-3 py-3 font-bold text-white' : 'flex gap-3 py-3 font-bold'
+                }
+                ><img src={menu.icon} alt={menu.title} className={'w-7 h-auto'} /> {menu.title}</NavLink>
             </li>
           ))
         }
