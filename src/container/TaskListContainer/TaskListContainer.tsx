@@ -15,14 +15,14 @@ function TaskListContainer() {
   useEffect(() => {
     
     setTaskList(tasks);
-    console.log(taskList, 'taskList aa');
+    console.log(taskList, 'taskList');
     
   }, []);
 
   return (
     <div>
       <PageTitle title={'Task List'} />
-      {taskList.length > 0 && <TaskList tasks={taskList} onComplete={onCompleteHandler} onEdit={onEditHandler} onDelete={onDeleteHandler} />}
+      <TaskList tasks={taskList} onComplete={onCompleteHandler} onEdit={onEditHandler} onDelete={onDeleteHandler} />
     </div>
   )
 }

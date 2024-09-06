@@ -1,8 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import AppContainer from "../App";
-import AddTask from "../container/AddTask/AddTask";
-import CompletedTask from "../container/CompletedTask/CompletedTask";
-import { Dashboard, TaskListContainer } from "../container";
+import { DashboardContainer, TaskListContainer, CompletedTaskContainer, AddTaskContainer } from "../container";
 
 export const AppRouter = createBrowserRouter([
   {
@@ -16,15 +14,15 @@ export const AppRouter = createBrowserRouter([
       },
       {
         path: '/dashboard',
-        element: <Dashboard />,
+        element: <DashboardContainer />,
       },
       {
         path: '/add-task',
-        element: <AddTask />,
+        element: <AddTaskContainer />,
       },
       {
         path: '/completed-task',
-        element: <CompletedTask />,
+        element: <CompletedTaskContainer />,
       }
     ]
   }

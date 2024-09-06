@@ -9,11 +9,11 @@ export interface iMenu {
   route: string;
 }
 export const Menus: iMenu[] = [
-  // {
-  //   title: 'Dashboard',
-  //   icon: dashboardIcon,
-  //   route: '/dashboard'
-  // },
+  {
+    title: 'Dashboard',
+    icon: dashboardIcon,
+    route: '/dashboard'
+  },
   {
     title: 'Task List',
     icon: taskListIcon,

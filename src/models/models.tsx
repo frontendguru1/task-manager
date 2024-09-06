@@ -3,14 +3,14 @@ export interface iPageTitleProps {
 };
 
 export interface iTaskItem {
-  id: number;
-  title: string;
-  description: string;
-  category: string;
-  status: string;
+  id: number | string;
+  title?: string;
+  description?: string;
+  category?: string;
+  status?: string;
   isCompleted: boolean;
-  startDate: Date;
-  endDate: Date;
+  startDate?: string;
+  endDate?: string;
 }
 
 export interface iTaskProps {

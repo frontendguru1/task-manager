@@ -1,5 +1,6 @@
-import Dashboard from "./Dashboard/Dashboard";
+import DashboardContainer from "./DashboardContainer/DashboardContainer";
 import AppOutlet from "./Outlet/AppOutlet";
 import TaskListContainer from "./TaskListContainer/TaskListContainer";
-
-export {Dashboard, AppOutlet, TaskListContainer}
+import AddTaskContainer from "./AddTaskContainer/AddTaskContainer";
+import CompletedTaskContainer from "./CompletedTaskContainer/CompletedTaskContainer";
+export {DashboardContainer, AppOutlet, TaskListContainer, AddTaskContainer, CompletedTaskContainer}

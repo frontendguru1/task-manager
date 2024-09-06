@@ -1,12 +1,12 @@
 import { PageTitle, TaskList } from "../../components";
 
-function Dashboard() {
+function DashboardContainer() {
   return (
     <div>
       <PageTitle title={'Dashboard'} />
-      <TaskList />
+      {/* <TaskList /> */}
     </div>
   )
 }
 
-export default Dashboard;
+export default DashboardContainer;

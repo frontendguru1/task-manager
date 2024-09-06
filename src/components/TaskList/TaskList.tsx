@@ -4,7 +4,7 @@ import { iTaskProps } from "../../models/models";
 
 function TaskList({tasks, onComplete, onDelete, onEdit}: iTaskProps) {
   // const [taskItems, setTaskItems] = useState<iTaskProps>();
-  console.log();
+  console.log('tasks aaa', tasks);
   
   if(tasks.length == 0 ) {
     return (
