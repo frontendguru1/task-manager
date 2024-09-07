@@ -5,7 +5,7 @@ import { iSingleTaskItemProps } from '../../models/models';
 
 function TaskItem({task, onComplete, onEdit, onDelete}: iSingleTaskItemProps) {
   return (
-    <li className={'bg-white rounded-md shadow'}>
+    <li className={`rounded-md shadow ${task?.isCompleted ? 'bg-green-100' : 'bg-white'}`}>
       <div className={'p-4'}>
         <div className={'flex justify-between'}>
           <div className={'text-[11px] bg-orange-300 rounded py-1 px-2'}>{task.category}</div>
@@ -13,21 +13,21 @@ function TaskItem({task, onComplete, onEdit, onDelete}: iSingleTaskItemProps) {
             <button 
               title={'Edit Task'}
               className={'border-none focus:border-none outline:none'}
-              onClick={() => onEdit(task.id)}
+              onClick={() => onEdit(task)}
               >
                 <img src={editIcon} alt="edit" className={'w-5 h-auto opacity-70 hover:opacity-100'} />
               </button>
             <button
               title={'Delete Task'}
               className={'border-none focus:border-none outline:none'}
-              onClick={()=> onDelete(task.id)}
+              onClick={()=> onDelete(task)}
               >
                 <img src={deleteIcon} alt="delete" className={'w-5 h-auto opacity-70 hover:opacity-100'} />
                 </button>
             <button 
               title={'Mark as Complete'}
               className={'border-none focus:border-none outline:none'}
-              onClick={()=> onComplete(task.id)}
+              onClick={()=> onComplete(task)}
               >
                 <img src={completeIcon} alt="delete" className={'w-5 h-auto opacity-70 hover:opacity-100'} />
               </button>

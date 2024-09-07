@@ -1,12 +1,13 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import AppContainer from "../App";
 import { DashboardContainer, TaskListContainer, CompletedTaskContainer, AddTaskContainer } from "../container";
+import { Error } from "../components";
 
-export const AppRouter = createBrowserRouter([
+export const AppRouter = createHashRouter([
   {
     path: "/",
     element: <AppContainer />,
-    errorElement: '',
+    errorElement: <Error />,
     children: [
       {
         path: "",

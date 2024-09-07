@@ -8,16 +8,25 @@ function TaskListContainer() {
   const [taskList, setTaskList] = useState<iTaskItem[]>(tasks);
   
 
-  const onCompleteHandler = () => {}
+  const onCompleteHandler = (item: iTaskItem) => {
+    const updatedTasks = taskList.map(task => (task.id == item.id ? {...task, isCompleted: !task.isCompleted} : task));
+    if(updatedTasks) {
+      setTaskList(updatedTasks);
+    }
+  }
+
   const onEditHandler = () => {}
-  const onDeleteHandler = () => {}
+
+  const onDeleteHandler = (item: iTaskItem) => {
+    setTaskList(taskList.filter(taskId => taskId.id !== item.id));
+  }
   
   useEffect(() => {
+    // setTaskList(tasks);
+    // console.log(taskList, 'taskList...');
+    localStorage.setItem('tasks', JSON.stringify(taskList));
     
-    setTaskList(tasks);
-    console.log(taskList, 'taskList');
-    
-  }, []);
+  }, [taskList]);
 
   return (
     <div>

@@ -9,7 +9,7 @@ const form_data = {
   description: "",
   category: "",
   isCompleted: false,
-  status: "",
+  status: "Open",
   startDate: "",
   endDate: "",
 }
@@ -30,10 +30,11 @@ function AddTaskContainer () {
    */
 
   const handleChange = (e:SyntheticEvent) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target as HTMLInputElement;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
+      id: Date.now(),
     });
   }
 

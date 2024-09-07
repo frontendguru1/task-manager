@@ -19,7 +19,10 @@ npm i
 npm run dev
 ```
 
-
+## 4 - Live Preview
+```coded
+https://frontendguru1.github.io/task-manager
+```
 
 ## Expanding the ESLint configuration
 
