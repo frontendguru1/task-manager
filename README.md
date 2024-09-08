@@ -19,8 +19,6 @@ npm i
 npm run dev
 ```
 
-## 4 - Live Preview
-```link
-https://frontendguru1.github.io/task-manager
-```
+## 4 - [Live Preview](https://frontendguru1.github.io/task-manager)
+
 
