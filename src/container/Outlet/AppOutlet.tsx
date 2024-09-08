@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 function AppOutlet() {
   return (
-    <div className={'flex-grow p-6 overflow-y-auto h-screen'}>
+    <div className={'flex-grow p-6 md:overflow-y-auto md:h-screen'}>
       {/* <TaskListContainer /> */}
       <Outlet />
     </div>

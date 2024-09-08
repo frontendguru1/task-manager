@@ -7,7 +7,7 @@ function AppContainer() {
     <div className={' h-screen w-full'}>
       {/* <h1 className={'text-center text-white py-8 text-5xl font-bold'}>Task Manager</h1> */}
 
-      <div className="flex">
+      <div className="block md:flex">
         <Sidebar />
         <AppOutlet />
       </div>

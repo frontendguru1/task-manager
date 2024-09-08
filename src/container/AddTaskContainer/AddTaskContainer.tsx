@@ -2,6 +2,8 @@ import { SyntheticEvent, useEffect, useState } from "react";
 import { PageTitle } from "../../components";
 import { getExistingTasks } from "../../utils/utils";
 import { iTaskItem } from "../../models/models";
+import { useSnackbar } from "notistack";
+import { useNavigate } from "react-router-dom";
 
 const form_data = {
   id: Date.now(),
@@ -17,6 +19,9 @@ const form_data = {
 function AddTaskContainer () {
   const [formData, setFormData] = useState<iTaskItem>(form_data);
   const [tasks, setTasks] = useState(getExistingTasks());
+  const [shouldRedirect, setShouldRedirect] = useState(false);
+  const { enqueueSnackbar } = useSnackbar();
+  const navigate = useNavigate();
 
   const labelClass = 'text-md block pb-2 font-medium';
   const inputClass = 'w-full border border-gray-400 rounded text-md p-2';
@@ -43,17 +48,27 @@ function AddTaskContainer () {
    */
   const handleFormSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
-    // console.log(formData);
+    enqueueSnackbar('Task has been created successfully!');
     setTasks([ ...tasks, formData]);
+    localStorage.setItem("tasks", JSON.stringify([...tasks, formData]));
     setFormData(form_data);
+    setShouldRedirect(true);
+
+
+   
+    
   }
 
   useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    if(shouldRedirect) {
+      const timer = setTimeout(() => {
+        navigate("/");
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    }
     
-    console.log('All tasks', tasks);
-    
-  }, [tasks])
+  }, [navigate, shouldRedirect])
 
   return(
     <>

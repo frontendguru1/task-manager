@@ -3,7 +3,7 @@ import { iMenu, Menus } from "../../routers/Menus";
 
 function Sidebar() {
   return (
-    <div className={'bg-gradient-to-r from-pink-500 to-blue-500 py-5 px-5 w-80 h-screen'}>
+    <div className={'bg-gradient-to-r from-pink-500 to-blue-500 py-5 px-5 md:w-80 md:h-screen'}>
       <div className={'text-xl text-white py-4'}>Taskly</div>
       <ul>
         {
